@@ -2,9 +2,9 @@ var express = require('express');
 var socket = require('socket.io');
 
 //App Setup
-
+var port = process.env.PORT || 5000;
 var app = express();
-var server = app.listen(5000,function(){
+var server = app.listen(port,function(){
     console.log('listing to port 5000');
 });
 

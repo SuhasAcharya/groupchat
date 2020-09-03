@@ -1,5 +1,5 @@
 //Make connection
-var socket = io.connect('https://chatable2k.herokuapp.com/');
+var socket = io.connect('https://suhaschat.herokuapp.com/');
 
 //Query DOM
 var user = document.getElementById('user');

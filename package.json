@@ -4,18 +4,12 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "devstart": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "serve": "^11.3.2",
     "socketio": "^1.0.0"
   },
   "devDependencies": {

@@ -15,7 +15,7 @@ btn.addEventListener('click',function(){
         message:message.value
     });
     message.value = '';
-    output.scrollTop = output.scrollHeight;
+    output.scroll = output.scrollHeight - output.clientHeight;
 });
 
 message.addEventListener('keypress',function(){

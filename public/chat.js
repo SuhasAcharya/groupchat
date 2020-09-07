@@ -15,13 +15,13 @@ btn.addEventListener('click',function(){
         message:message.value
     });
     message.value = '';
+    output.scrollTop = output.scrollHeight;
 });
 
 message.addEventListener('keypress',function(){
     socket.emit('typing',user.value);
 });
 
-document.getElementById("output").scrollTop = document.getElementById("output").scrollHeight ;
 
 //Listen for Events
 socket.on('chat',function(data){

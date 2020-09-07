@@ -21,6 +21,8 @@ message.addEventListener('keypress',function(){
     socket.emit('typing',user.value);
 });
 
+document.getElementById("output").scrollTop = document.getElementById("output").scrollHeight ;
+
 //Listen for Events
 socket.on('chat',function(data){
     feedback.innerHTML = '';

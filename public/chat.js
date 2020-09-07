@@ -14,11 +14,11 @@ btn.addEventListener('click',function(){
         user:user.value,
         message:message.value
     });
-    message.value = '';
     var chatWindow = document.getElementById('chat-window');
     var xH = chatWindow.scrollHeight; 
     chatWindow.scrollTo(0, xH);
 
+    message.value = '';
 });
 
 message.addEventListener('keypress',function(){

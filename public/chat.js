@@ -6,8 +6,9 @@ var user = document.getElementById('user');
 var message = document.getElementById('message');  
 var btn = document.getElementById('send');
 var output = document.getElementById('output');
-output.scrollTop = output.scrollHeight;
 var feedback = document.getElementById('feedback');
+var xH = output.scrollHeight; 
+output.scrollTo(0, xH);
 
 //Emit Events
 btn.addEventListener('click',function(){

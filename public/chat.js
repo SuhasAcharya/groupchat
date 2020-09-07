@@ -7,9 +7,6 @@ var message = document.getElementById('message');
 var btn = document.getElementById('send');
 var output = document.getElementById('output');
 var feedback = document.getElementById('feedback');
-var chatWindow = document.getElementById('chat-window');
-var xH = chatWindow.scrollHeight; 
-chatWindow.scrollTo(0, xH);
 
 //Emit Events
 btn.addEventListener('click',function(){
@@ -18,6 +15,10 @@ btn.addEventListener('click',function(){
         message:message.value
     });
     message.value = '';
+    var chatWindow = document.getElementById('chat-window');
+    var xH = chatWindow.scrollHeight; 
+    chatWindow.scrollTo(0, xH);
+
 });
 
 message.addEventListener('keypress',function(){

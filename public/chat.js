@@ -25,12 +25,12 @@ message.addEventListener('keypress',function(){
 
 //Listen for Events
 socket.on('chat',function(data){
-    var chatWindow = document.getElementById('chat-window');
-    var xH = chatWindow.scrollHeight; 
-    chatWindow.scrollTo(-1, xH);
-
     feedback.innerHTML = '';
     output.innerHTML += '<p><strong>' + data.user + ':</strong>' + data.message + '</p>';
+    var chatWindow = document.getElementById('chat-window');
+    var xH = chatWindow.scrollHeight; 
+    chatWindow.scrollTo(0, xH);
+
 });
 
 socket.on('typing',function(data){

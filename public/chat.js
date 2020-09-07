@@ -14,11 +14,8 @@ btn.addEventListener('click',function(){
         user:user.value,
         message:message.value
     });
-    var chatWindow = document.getElementById('chat-window');
-    var xH = chatWindow.scrollHeight; 
-    chatWindow.scrollTo(0, xH);
-
     message.value = '';
+
 });
 
 message.addEventListener('keypress',function(){
@@ -28,6 +25,10 @@ message.addEventListener('keypress',function(){
 
 //Listen for Events
 socket.on('chat',function(data){
+    var chatWindow = document.getElementById('chat-window');
+    var xH = chatWindow.scrollHeight; 
+    chatWindow.scrollTo(-1, xH);
+
     feedback.innerHTML = '';
     output.innerHTML += '<p><strong>' + data.user + ':</strong>' + data.message + '</p>';
 });

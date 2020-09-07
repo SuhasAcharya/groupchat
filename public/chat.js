@@ -7,8 +7,9 @@ var message = document.getElementById('message');
 var btn = document.getElementById('send');
 var output = document.getElementById('output');
 var feedback = document.getElementById('feedback');
-var xH = output.scrollHeight; 
-output.scrollTo(0, xH);
+var chatWindow = document.getElementById('chat-window');
+var xH = chatWindow.scrollHeight; 
+chatWindow.scrollTo(0, xH);
 
 //Emit Events
 btn.addEventListener('click',function(){
